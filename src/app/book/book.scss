@@ -1,0 +1,114 @@
+.booking{
+    height: 110vh;
+    background-color: rgba($color: rgb(21, 30, 38), $alpha: 1.0);
+
+    .container{
+        height: 100%;
+    }
+
+    &__box{
+        display: flex;
+        height: 100%;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        padding-block: 30px;
+
+        &-header{
+            height: 20%;
+
+            h1{
+                font-size: 40px;
+                font-weight: 500;
+            }
+        }
+
+        &-footer{
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            height: 80%;
+            background-color: black;
+            padding-right: 2%;
+
+            &__left{
+                width: 50%;
+                height: 100%;
+                background: url('../../media/IMG_5145.jpg') center/cover no-repeat;
+            }
+
+            &__right{
+                width: 45%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                height: 100%;
+        
+                .select-container {
+                    position: relative;
+                    width: 100%;
+                }
+                
+                .select-container select {
+                    padding-inline: 20px;
+                    width: 100%;
+                    height: 40px;
+                    border: 1px solid white;
+                    background-color: black;
+                    color: white;
+                    appearance: none;
+                    -webkit-appearance: none;
+                    -moz-appearance: none;
+                    user-select: none;
+                }
+                
+                .select-container::after {
+                    content: "";
+                    background: url('../../media/icons8-forward-24.png') center/cover no-repeat; 
+                    position: absolute;
+                    width: 15px;
+                    height: 15px;
+                    top: 50%;
+                    right: 20px;
+                    transform: translateY(-50%) rotate(90deg); /* Поворачиваем на 90° вниз */
+                    pointer-events: none;
+                }
+
+                input{
+                    padding-inline: 20px;
+                    background-color: black;
+                    height: 40px;
+                    border: 1px solid white;
+                    color: white;
+                }
+
+                input[type="date"] {
+                    color-scheme: dark; 
+                }
+                
+                button{
+                    height: 40px;
+                    border: 1px solid white;
+                    background: transparent;
+                }
+
+                button:hover{
+                    background: white;
+                    color: black;
+                }
+
+                button:disabled:hover{
+                    background: transparent;
+                    color: grey;
+                }
+
+                button:disabled{
+                    border: 1px solid grey;
+                    background: transparent;
+                    color: grey;
+                }
+            }
+        }
+    }
+}

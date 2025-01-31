@@ -1,0 +1,27 @@
+.hero{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: rgba($color: rgb(21, 30, 38), $alpha: 1.0);
+
+    .hero__box{   
+        display: flex;
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        row-gap: 30px;
+
+        h1{
+            font-size: 70px;
+        }
+        h2{
+            font-size: 30px;
+        }
+        h4{
+            font-size: 15px;
+        }
+    }
+}

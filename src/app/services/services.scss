@@ -1,0 +1,53 @@
+.services{
+    min-height: 100vh;
+    background-color: rgba($color: rgb(21, 30, 38), $alpha: 1.0);
+
+    .container{
+        height: 100%;
+    }
+
+    &__box{
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding-block: 30px;
+
+        h1{
+            font-size: 40px;
+            margin-bottom: 30px;
+            font-weight: 500;
+        }
+
+        ul{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            row-gap: 50px;
+            height: fit-content;
+            width: 60%;
+
+            li{
+                height: 150px;
+                // border: 1px solid rebeccapurple;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                padding-block: 10px;
+                border-bottom: 1px solid white;
+
+                h2{
+                    font-size: 20px;
+                    font-weight: 500;
+                }
+
+                p{
+                    font-size: 15px;
+                    font-weight: 200;
+                }
+            }
+        }
+    }
+}

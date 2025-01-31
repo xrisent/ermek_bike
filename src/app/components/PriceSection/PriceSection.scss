@@ -1,0 +1,94 @@
+.price{
+    display:flex;
+    background-color: rgba($color: hsl(0, 17%, 21%), $alpha: 1.0);
+    height: 100vh;
+    position: relative;
+
+    .price__box{
+        height: 100%;
+        display: flex;
+        justify-content: flex-end;
+        padding: 0 50px;
+
+        &__content{
+            z-index: 50;
+            width: 30%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+
+            h2{
+                font-size: 27px;
+                height: 10%;
+            }
+
+            ul{
+                height: 55%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                row-gap: 5px;
+
+                li{
+                    position: relative;
+
+                    .variables{
+                        display: flex;
+                        width: fit-content;
+                        justify-content: space-between;
+
+                        p:first-child{
+                            border-right: 1px solid white;
+                            padding-right: 10px;
+                        }
+                        p:last-child{
+                            padding-left: 10px;
+                        }
+                    }
+                }
+
+                li::before{
+                    content: "";
+                    width: 30px;
+                    height: 30px;
+                    position: absolute;
+                    top: 10px;
+                    left: -40px;
+                    background: url('../../../media/basic-ui-computer-26-svgrepo-com.svg') center/cover no-repeat;
+                }
+
+                h3{
+                    font-size: 16px;
+                    margin-bottom: 5px;
+                }
+
+                p{
+                    font-size: 12px;
+                }
+            }
+
+            button{
+                height: 7%;
+                margin: 30px 0 0 0;
+                background: none;
+                border: 1px solid white;
+                width: 40%;
+                transition: all 0.18s ease-in-out;
+            }
+
+            button:hover{
+                background-color: white;
+                color: black;
+            }
+        }
+        img{
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: 49;
+            width: 60%;
+            height: 100%;
+        }
+    }
+}
