@@ -5,8 +5,7 @@ export default function HeroSection (){
         <section className='hero'>
             <div className="container">
                 <div className="hero__box">
-                    <h1>Байкфит студия</h1>
-                    <h2>Пенис</h2>        
+                    <h1>Байкфит студия</h1>      
                     <h4>Настройка посадки на шоссейном и MTB велосипедах</h4>
                 </div>
             </div>
