@@ -8,7 +8,7 @@ export async function POST(req) {
     const { clientName, phoneNumber, serviceId, startTime } = await req.json();
 
     const parsedServiceId = parseInt(serviceId, 10);
-    const parsedStartTime = new Date(`${startTime}:00`);
+    const parsedStartTime = new Date(`${startTime}Z`);
 
     if (isNaN(parsedStartTime.getTime())) {
       return new Response(JSON.stringify({ error: 'Invalid start time' }), { status: 400 });
@@ -43,7 +43,7 @@ export async function POST(req) {
     });
 
     if (existingBooking) {
-      return new Response(JSON.stringify({ error: 'Time slot is already booked' }), { status: 400 });
+      return new Response(JSON.stringify({ error: 'Time slot is already booked' }), { status: 405 });
     }
 
     const newBooking = await prisma.booking.create({
@@ -106,7 +106,7 @@ export async function PUT(req) {
     });
 
     if (existingBooking) {
-      return new Response(JSON.stringify({ error: 'Time slot is already booked' }), { status: 400 });
+      return new Response(JSON.stringify({ error: 'Time slot is already booked' }), { status: 405 });
     }
 
     const updatedBooking = await prisma.booking.update({

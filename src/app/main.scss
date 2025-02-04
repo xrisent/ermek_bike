@@ -15,8 +15,15 @@
 
 main{
     min-height: 30vh;
+    background-color: rgba($color: rgb(21, 30, 38), $alpha: 1.0);
 }
 
+.notFound{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 30vh;
+}
 
 
 

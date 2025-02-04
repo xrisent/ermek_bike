@@ -36,28 +36,43 @@ export default function BookPage() {
   
     const bookedTimes = bookings
       .filter((b) => b.startTime.split("T")[0] === date)
-      .map((b) => ({
-        start: new Date(b.startTime).toLocaleTimeString("en-GB", { timeZone: "Asia/Bishkek", hour12: false }),
-        end: new Date(b.endTime).toLocaleTimeString("en-GB", { timeZone: "Asia/Bishkek", hour12: false }),
-      }));
+      .map((b) => {
+        const startTime = new Date(b.startTime); 
+        const endTime = new Date(b.endTime);
+        return {
+          start: startTime.getUTCHours() * 60 + startTime.getUTCMinutes(), 
+          end: endTime.getUTCHours() * 60 + endTime.getUTCMinutes(), 
+        };
+      });
+  
+    const currentTime = new Date();
+    const currentTimeStr = currentTime.getUTCHours() * 60 + currentTime.getUTCMinutes(); 
+    const currentDateStr = currentTime.toISOString().split("T")[0];
   
     return times.filter((time) => {
+      if (date === currentDateStr) {
+        const [hours, minutes] = time.split(":").map(Number);
+        const timeInMinutes = hours * 60 + minutes;
+        if (timeInMinutes <= currentTimeStr) return false;
+      }
+  
       const [hours, minutes] = time.split(":").map(Number);
       const startTimeObj = new Date();
-      startTimeObj.setHours(hours, minutes, 0);
+      startTimeObj.setUTCHours(hours, minutes, 0);
   
       const endTimeObj = new Date(startTimeObj.getTime() + serviceTime * 60000);
-      const endHours = endTimeObj.getHours().toString().padStart(2, "0");
-      const endMinutes = endTimeObj.getMinutes().toString().padStart(2, "0");
-      const endTime = `${endHours}:${endMinutes}`;
+      const endHours = endTimeObj.getUTCHours();
+      const endMinutes = endTimeObj.getUTCMinutes();
+      const endTimeInMinutes = endHours * 60 + endMinutes;
   
-      return !bookedTimes.some(({ start, end }) => 
-        (time >= start && time < end) || 
-        (endTime > start && endTime <= end) || 
-        (time < start && endTime > end)
+      return !bookedTimes.some(({ start, end }) =>
+        (start < endTimeInMinutes && start >= startTimeObj.getUTCHours() * 60 + startTimeObj.getUTCMinutes()) ||
+        (end > startTimeObj.getUTCHours() * 60 + startTimeObj.getUTCMinutes() && end <= endTimeInMinutes) ||
+        (startTimeObj.getUTCHours() * 60 + startTimeObj.getUTCMinutes() < start && endTimeInMinutes > end)
       );
     });
   };
+  
 
   useEffect(() => {
     if (startTime && serviceId) {
@@ -73,7 +88,6 @@ export default function BookPage() {
 
   const handleBooking = async () => {
     try {
-      console.log({ clientName, phoneNumber, serviceId, startTime });
 
       const response = await fetch('/api/bookings', {
         method: 'POST',
@@ -87,6 +101,7 @@ export default function BookPage() {
         setStartTime('');
         setPhoneNumber('');
         setServiceId('');
+        setAvailableTimes([])
         fetch('/api/bookings') 
           .then((res) => res.json())
           .then(setBookings);
@@ -97,6 +112,12 @@ export default function BookPage() {
       setSuccessMessage('Произошла ошибка. Попробуйте позже.');
     }
   };
+
+  useEffect(() => {
+    if (availableTimes.length > 0 && startTime.endsWith("T10:00")) {
+      setStartTime(startTime.split("T")[0] + "T" + availableTimes[0] + ":00");
+    }
+  }, [availableTimes]);
 
   return (
     <main>
@@ -145,7 +166,7 @@ export default function BookPage() {
                 />
                 
                 <div className="select-container">
-                  <select 
+                  <select
                     value={availableTimes.length === 0 ? "" : startTime?.split("T")[1] || ""}
                     onChange={(e) => setStartTime(startTime.split("T")[0] + "T" + e.target.value)}
                     disabled={availableTimes.length === 0}
@@ -156,6 +177,10 @@ export default function BookPage() {
                           {time}
                         </option>
                       ))
+                    ) : (serviceId !== "" && clientName !== "" && phoneNumber !== "" && startTime !== "") ? (
+                      <option value="" disabled>
+                        На выбранную дату нет доступного времени
+                      </option>
                     ) : (
                       <option value="" disabled>
                         Выберите услугу и дату
@@ -164,7 +189,7 @@ export default function BookPage() {
                   </select>
                 </div>
 
-                <button onClick={handleBooking} disabled={!serviceId || !clientName || !phoneNumber || !startTime}>
+                <button onClick={handleBooking} disabled={!serviceId || !clientName || !phoneNumber || !startTime || availableTimes.length === 0}>
                   Забронировать
                 </button>
               </div>
