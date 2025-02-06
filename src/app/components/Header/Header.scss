@@ -1,5 +1,6 @@
 .header {
     background-color: black;
+    font-weight: 300;
 }
 
 .header__box__line {
@@ -33,7 +34,7 @@
 }
 
 .h__top__list {
-    width: 550px;
+    width: 490px;
     display: flex;
     justify-content: space-between;
 }
@@ -45,7 +46,7 @@
 }
 
 .h__bottom__nav__page__li {
-    font-weight: 500;
+    font-weight: 400;
     font-size: 18px;
     line-height: 129%;
     position: relative;
@@ -58,7 +59,7 @@
     position: absolute;
     background: white;
     width: 0;
-    height: 1px;
+    height: 2px;
     left: 0;
     top: 24px;
     transition: .4s;
@@ -101,6 +102,14 @@
 
     .h__mobile__burger{
         width: 28px;
+        height: 28px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .h__mobile__burger__line{
+        width: 28px;
         height: 2px;
         background:white;
         position: relative;
@@ -108,9 +117,9 @@
         top: 0px;
         z-index: 20;
         border-radius: 2px;
-    
     }
-    .h__mobile__burger::before{
+
+    .h__mobile__burger__line::before{
         content: '';
         width: 28px;
         height: 2px;
@@ -120,7 +129,7 @@
         border-radius: 2px;
         
     }
-    .h__mobile__burger::after{
+    .h__mobile__burger__line::after{
         content: '';
         width: 28px;
         height: 2px;
@@ -131,18 +140,18 @@
        
     }
 
-    .h__mobile__burger.open {
+    .h__mobile__burger__line.open {
         background: none;
     }
 
-    .h__mobile__burger.open::after {
+    .h__mobile__burger__line.open::after {
         transform: rotate(225deg);
         top: 0;
         transition: .4s;
         background: white;
     }
 
-    .h__mobile__burger.open::before {
+    .h__mobile__burger__line.open::before {
         transform: rotate(-225deg);
         top: 0;
         transition: .5s;
@@ -159,6 +168,7 @@
         color: white;
         opacity: 0;
         padding: 20px;
+        z-index: 10000;
     }
 
     .h__mobile__nav__ul {

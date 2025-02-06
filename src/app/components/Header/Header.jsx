@@ -97,7 +97,9 @@ export default function Header() {
 
                     <h3 className="header__bottom__name">Bikefit</h3>
 
-                    <div className={`h__mobile__burger ${isOpen ? "open" : ""}`} onClick={handleNavClick}></div>
+                    <div className={`h__mobile__burger ${isOpen ? "open" : ""}`} onClick={handleNavClick}>
+                        <div className={`h__mobile__burger__line ${isOpen ? "open" : ""}`}></div>
+                    </div>
                     
                     <motion.nav
                       className="header__mobile__nav-box"
