@@ -105,10 +105,10 @@ export default function Header() {
                       transition={{ duration: 0.5, ease: "easeInOut" }}
                     >
                       <ul className="h__mobile__nav__ul">
-                        <li className="h__mobile__nav__li"><Link href="/">Главная</Link></li>
-                        <li className="h__mobile__nav__li"><Link href="/services">Сервисы и услуги</Link></li>
-                        <li className="h__mobile__nav__li"><Link href="/book">Бронирование</Link></li>
-                        <li className="h__mobile__nav__li"><Link href="/contacts">Контакты</Link></li>
+                        <li onClick={handleNavClick} className="h__mobile__nav__li"><Link href="/">Главная</Link></li>
+                        <li onClick={handleNavClick} className="h__mobile__nav__li"><Link href="/services">Сервисы и услуги</Link></li>
+                        <li onClick={handleNavClick} className="h__mobile__nav__li"><Link href="/book">Бронирование</Link></li>
+                        <li onClick={handleNavClick} className="h__mobile__nav__li"><Link href="/contacts">Контакты</Link></li>
                       </ul>
                     </motion.nav>
                 </div>

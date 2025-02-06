@@ -153,12 +153,13 @@
         position: fixed;
         top: 60;
         right: -100%;
-        width: 300px;
-        height: 100vh;
+        max-width: 600px;
+        height: 80vh;
         background: rgba(0, 0, 0, );
         color: white;
         opacity: 0;
         padding: 20px;
+        z-index: 190;
     }
 
     .h__mobile__nav__ul {
