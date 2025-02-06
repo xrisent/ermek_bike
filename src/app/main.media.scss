@@ -1,400 +1,400 @@
-@media (min-width: 1400px){
-    .container{
-        width: 1200px;
-    }
-}
+// @media (min-width: 1400px){
+//     .container{
+//         width: 1200px;
+//     }
+// }
 
-@media (min-width: 1600px){
-    .container{
-        width: 1400px;
-    }
-}
+// @media (min-width: 1600px){
+//     .container{
+//         width: 1400px;
+//     }
+// }
 
-@media (min-width: 1800px){
-    .container{
-        width: 1600px;
-    }
-}
+// @media (min-width: 1800px){
+//     .container{
+//         width: 1600px;
+//     }
+// }
 
-@media (max-width: 1200px){
-    .container{
-        width: 1000px;
-    }
+// @media (max-width: 1200px){
+//     .container{
+//         width: 1000px;
+//     }
 
-    header .container{
-        height: 20vh;
-    }
+//     header .container{
+//         height: 20vh;
+//     }
 
-    .price, .hero, .contactsSection{
-        height: 55vh;
-    }
+//     .price, .hero, .contactsSection{
+//         height: 55vh;
+//     }
 
-    .timeSection{
-        height: 35vh;
-    }
+//     .timeSection{
+//         height: 35vh;
+//     }
     
-    .bookingSection{
-        height: 25vh;
-    }
+//     .bookingSection{
+//         height: 25vh;
+//     }
 
-    .footer__box{
-        height: 25vh;
-    }
+//     .footer__box{
+//         height: 25vh;
+//     }
 
-    .price__box__content{
-        h2{
-            font-size: 20px !important;
-        }
+//     .price__box__content{
+//         h2{
+//             font-size: 20px !important;
+//         }
 
-        h3{
-            font-size: 14px !important;
-        }
+//         h3{
+//             font-size: 14px !important;
+//         }
 
-        p{
-            font-size: 10px !important;
-        }
-    }
+//         p{
+//             font-size: 10px !important;
+//         }
+//     }
 
-    .price .price__box img{
-        width: 55%;
-    }
-}
+//     .price .price__box img{
+//         width: 55%;
+//     }
+// }
 
 
-@media (max-width: 1000px){
+// @media (max-width: 1000px){
 
-    .container{
-        width: 800px;
-    }
+//     .container{
+//         width: 800px;
+//     }
 
-    header .container{
-        height: 20vh;
-    }
+//     header .container{
+//         height: 20vh;
+//     }
 
-    .price, .hero, .contactsSection{
-        height: 50vh;
-    }
+//     .price, .hero, .contactsSection{
+//         height: 50vh;
+//     }
 
-    .timeSection{
-        height: 35vh;
-    }
+//     .timeSection{
+//         height: 35vh;
+//     }
     
-    .bookingSection{
-        height: 25vh;
-    }
+//     .bookingSection{
+//         height: 25vh;
+//     }
 
-    .footer__box{
-        height: 25vh;
-    }
+//     .footer__box{
+//         height: 25vh;
+//     }
 
-    .price__box__content{
-        h2{
-            font-size: 20px !important;
-        }
+//     .price__box__content{
+//         h2{
+//             font-size: 20px !important;
+//         }
 
-        h3{
-            font-size: 12px !important;
-        }
+//         h3{
+//             font-size: 12px !important;
+//         }
 
-        p{
-            font-size: 9px !important;
-        }
-    }
+//         p{
+//             font-size: 9px !important;
+//         }
+//     }
 
-    .price .price__box img{
-        width: 55%;
-    }
+//     .price .price__box img{
+//         width: 55%;
+//     }
     
-    .contactsSection__box__content{
-        h2{
-            font-size: 20px;
-        }
+//     .contactsSection__box__content{
+//         h2{
+//             font-size: 20px;
+//         }
 
-        ul li p {
-            font-size: 12px;
-        }
+//         ul li p {
+//             font-size: 12px;
+//         }
 
-        .contacts__imgs img{
-            width: 20px;
-            height: 20px;
-        }
+//         .contacts__imgs img{
+//             width: 20px;
+//             height: 20px;
+//         }
 
-        .footer__box .contacts__imgs a{
-            width: 20px !important;
-            height: 20px !important;
-        }
-    }
+//         .footer__box .contacts__imgs a{
+//             width: 20px !important;
+//             height: 20px !important;
+//         }
+//     }
 
-    .contacts__p p{
-        font-size: 12px;
-    }
-}
+//     .contacts__p p{
+//         font-size: 12px;
+//     }
+// }
 
-@media (max-width: 800px){
+// @media (max-width: 800px){
 
-    .container{
-        width: 600px;
-    }
+//     .container{
+//         width: 600px;
+//     }
 
-    header {
+//     header {
 
-        nav{
-            width: 70% !important;
-        }
+//         nav{
+//             width: 70% !important;
+//         }
 
-        .container{
-            height: 20vh;
-        }
-    }
+//         .container{
+//             height: 20vh;
+//         }
+//     }
 
-    .price, .hero, .contactsSection{
-        height: 40vh;
-    }
+//     .price, .hero, .contactsSection{
+//         height: 40vh;
+//     }
 
-    .timeSection{
-        height: 35vh;
-    }
+//     .timeSection{
+//         height: 35vh;
+//     }
     
-    .bookingSection{
-        height: 25vh;
-    }
+//     .bookingSection{
+//         height: 25vh;
+//     }
 
-    .footer__box{
-        height: 25vh;
-    }
+//     .footer__box{
+//         height: 25vh;
+//     }
 
-    .price__box{
-        padding: 10px !important;
-    }
+//     .price__box{
+//         padding: 10px !important;
+//     }
 
-    .price__box__content{
+//     .price__box__content{
         
-        h2{
-            font-size: 20px !important;
-        }
+//         h2{
+//             font-size: 20px !important;
+//         }
 
-        h3{
-            font-size: 12px !important;
-        }
+//         h3{
+//             font-size: 12px !important;
+//         }
 
-        p{
-            font-size: 9px !important;
-        }
+//         p{
+//             font-size: 9px !important;
+//         }
 
-        ul{
-            height: 65% !important;
-        }
+//         ul{
+//             height: 65% !important;
+//         }
 
-        button{
-            width: 40% !important;
-            height: 4% !important;
-            font-size: 8px;
-            margin: 40px 0 0 !important;
-        }
-    }
+//         button{
+//             width: 40% !important;
+//             height: 4% !important;
+//             font-size: 8px;
+//             margin: 40px 0 0 !important;
+//         }
+//     }
 
-    .price .price__box img{
-        width: 55%;
-    }
+//     .price .price__box img{
+//         width: 55%;
+//     }
     
-    .contactsSection__box__content{
-        padding: 5px 0 5px 40px;
+//     .contactsSection__box__content{
+//         padding: 5px 0 5px 40px;
 
-        h2{
-            font-size: 20px;
-        }
+//         h2{
+//             font-size: 20px;
+//         }
 
-        ul li p {
-            font-size: 10px;
-        }
+//         ul li p {
+//             font-size: 10px;
+//         }
 
-        .contacts__imgs img{
-            width: 20px;
-            height: 20px;
-        }
+//         .contacts__imgs img{
+//             width: 20px;
+//             height: 20px;
+//         }
 
-        .footer__box .contacts__imgs a{
-            width: 20px !important;
-            height: 20px !important;
-        }
-    }
+//         .footer__box .contacts__imgs a{
+//             width: 20px !important;
+//             height: 20px !important;
+//         }
+//     }
 
-    // .contactsSection__box img{
-    //     width: 50%;
-    // }
+//     // .contactsSection__box img{
+//     //     width: 50%;
+//     // }
 
-    .contacts__p p{
-        font-size: 10px;
-    }
-}
+//     .contacts__p p{
+//         font-size: 10px;
+//     }
+// }
 
-@media (max-width: 600px){
+// @media (max-width: 600px){
 
-    .container{
-        width: 400px;
-    }
+//     .container{
+//         width: 400px;
+//     }
 
-    header {
-        .container{
-            position: relative;
-        }
+//     header {
+//         .container{
+//             position: relative;
+//         }
 
-        button{
-            background-color: transparent;
-            color: white;
-            border: 0;
-            display: flex !important;
-            flex-direction: column;
-            justify-content: space-between;
-            width: 40px;
-            height: 30px;
-            position: absolute;
-            right: 10px;
-            bottom: 20%;
-            z-index: 1000;
+//         button{
+//             background-color: transparent;
+//             color: white;
+//             border: 0;
+//             display: flex !important;
+//             flex-direction: column;
+//             justify-content: space-between;
+//             width: 40px;
+//             height: 30px;
+//             position: absolute;
+//             right: 10px;
+//             bottom: 20%;
+//             z-index: 1000;
 
-            span{
-                width: 100%;
-                height: 10%;
-                background-color: white;
-            }
-        }
+//             span{
+//                 width: 100%;
+//                 height: 10%;
+//                 background-color: white;
+//             }
+//         }
 
-        .container{
-            height: 20vh;
-        }   
-    }
+//         .container{
+//             height: 20vh;
+//         }   
+//     }
 
-    header{
-        position: relative;
-        nav {
-            width: 100%;
-            display: none !important;
-            &.visible {
-                left: 0;
-                position: fixed;
-                display: flex !important; 
-                flex-direction: column;
-                background-color: black;
-                height: 100vh;
-                z-index: 999;
-                width: 100vw !important;
-                padding: 30%;
-            }
-        }
-    }
+//     header{
+//         position: relative;
+//         nav {
+//             width: 100%;
+//             display: none !important;
+//             &.visible {
+//                 left: 0;
+//                 position: fixed;
+//                 display: flex !important; 
+//                 flex-direction: column;
+//                 background-color: black;
+//                 height: 100vh;
+//                 z-index: 999;
+//                 width: 100vw !important;
+//                 padding: 30%;
+//             }
+//         }
+//     }
 
-    .price, .hero, .contactsSection{
-        height: 35vh;
-    }
+//     .price, .hero, .contactsSection{
+//         height: 35vh;
+//     }
 
-    .timeSection{
-        height: 35vh;
-    }
+//     .timeSection{
+//         height: 35vh;
+//     }
 
-    .timeSection__box{
-        h4{
-            font-size: 12px;
-        }
+//     .timeSection__box{
+//         h4{
+//             font-size: 12px;
+//         }
 
-        p{
-            font-size: 10px;
-        }
-    }
+//         p{
+//             font-size: 10px;
+//         }
+//     }
     
-    .bookingSection{
-        height: 20vh;
-    }
+//     .bookingSection{
+//         height: 20vh;
+//     }
 
-    .footer__box{
-        height: 25vh;
-    }
+//     .footer__box{
+//         height: 25vh;
+//     }
 
-    .price__box{
-        padding: 10px !important;
-    }
+//     .price__box{
+//         padding: 10px !important;
+//     }
 
-    .price__box__content{
+//     .price__box__content{
         
-        h2{
-            font-size: 12px !important;
-        }
+//         h2{
+//             font-size: 12px !important;
+//         }
 
-        h3{
-            font-size: 8px !important;
-        }
+//         h3{
+//             font-size: 8px !important;
+//         }
 
-        p{
-            font-size: 6px !important;
-        }
+//         p{
+//             font-size: 6px !important;
+//         }
 
-        ul{
-            height: 65% !important;
-        }
+//         ul{
+//             height: 65% !important;
+//         }
 
-        button{
-            width: 40% !important;
-            height: 4% !important;
-            font-size: 8px;
-            margin: 40px 0 0 !important;
-        }
-    }
+//         button{
+//             width: 40% !important;
+//             height: 4% !important;
+//             font-size: 8px;
+//             margin: 40px 0 0 !important;
+//         }
+//     }
 
-    .price .price__box img{
-        width: 55%;
-    }
+//     .price .price__box img{
+//         width: 55%;
+//     }
     
-    .contactsSection__box__content{
-        padding: 5px 0 5px 40px;
+//     .contactsSection__box__content{
+//         padding: 5px 0 5px 40px;
 
-        h2{
-            font-size: 13px;
-        }
+//         h2{
+//             font-size: 13px;
+//         }
 
-        ul li p {
-            font-size: 8px;
-        }
+//         ul li p {
+//             font-size: 8px;
+//         }
 
-        .contacts__imgs img{
-            width: 12px;
-            height: 12px;
-        }
+//         .contacts__imgs img{
+//             width: 12px;
+//             height: 12px;
+//         }
 
-        .footer__box .contacts__imgs a{
-            width: 20px !important;
-            height: 20px !important;
-        }
-    }
+//         .footer__box .contacts__imgs a{
+//             width: 20px !important;
+//             height: 20px !important;
+//         }
+//     }
 
-    .hero__box{
-        h1{
-            font-size: 50px !important;
-        }
-        h2{
-            font-size: 20px !important;
-        }
-        h4{
-            font-size: 10px !important; 
-        }
-    }
+//     .hero__box{
+//         h1{
+//             font-size: 50px !important;
+//         }
+//         h2{
+//             font-size: 20px !important;
+//         }
+//         h4{
+//             font-size: 10px !important; 
+//         }
+//     }
 
-    // .contactsSection__box img{
-    //     width: 50%;
-    // }
+//     // .contactsSection__box img{
+//     //     width: 50%;
+//     // }
 
-    .contacts__p{
-        flex-direction: column;
-    }
+//     .contacts__p{
+//         flex-direction: column;
+//     }
 
-    .contacts__p p{
-        font-size: 8px;
-    }
+//     .contacts__p p{
+//         font-size: 8px;
+//     }
 
-    .price .price__box__content ul li:before {
-        width: 18px;
-        height: 18px;
-        left: -25px;
-    }
-}
+//     .price .price__box__content ul li:before {
+//         width: 18px;
+//         height: 18px;
+//         left: -25px;
+//     }
+// }
 
 

@@ -9,7 +9,7 @@
 }
 
 .container{
-    width: 1200px;
+    max-width: 1200px;
     margin: 0 auto;
 }
 
@@ -23,6 +23,13 @@ main{
     justify-content: center;
     align-items: center;
     min-height: 30vh;
+}
+
+@media (max-width: 1300px) {
+    .container {
+        max-width: 89% !important;
+    }
+
 }
 
 
