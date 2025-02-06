@@ -63,10 +63,10 @@ export default function Header() {
                         <h3 className="header__bottom__name">Bikefit</h3>
                         <nav className="header__bottom__nav">
                             <ul className="h__bottom__nav__page">
-                                <li className="h__bottom__nav__page__li">Главная</li>
-                                <li className="h__bottom__nav__page__li">Сервисы и услуги</li>
-                                <li className="h__bottom__nav__page__li">Бронирование</li>
-                                <li className="h__bottom__nav__page__li">Контакты</li>
+                                <li className="h__bottom__nav__page__li"><Link href="/">Главная</Link></li>
+                                <li className="h__bottom__nav__page__li"><Link href="/services">Сервисы и услуги</Link></li>
+                                <li className="h__bottom__nav__page__li"><Link href="/book">Бронирование</Link></li>
+                                <li className="h__bottom__nav__page__li"><Link href="/contacts">Контакты</Link></li>
                             </ul>
                         </nav>
                     </div>
@@ -80,12 +80,13 @@ export default function Header() {
                 animate={{ y: scrolled ? 0 : -100, opacity: scrolled ? 1 : 0 }}
                 transition={{ duration: 0.3 }}>
                     <div className="header__bottom">
+                        <h3 className="header__bottom__name">Bikefit</h3>
                         <nav className="header__bottom__nav">
                             <ul className="h__bottom__nav__page">
-                                <li className="h__bottom__nav__page__li">Главная</li>
-                                <li className="h__bottom__nav__page__li">Сервисы и услуги</li>
-                                <li className="h__bottom__nav__page__li">Бронирование</li>
-                                <li className="h__bottom__nav__page__li">Контакты</li>
+                                <li className="h__bottom__nav__page__li"><Link href="/">Главная</Link></li>
+                                <li className="h__bottom__nav__page__li"><Link href="/services">Сервисы и услуги</Link></li>
+                                <li className="h__bottom__nav__page__li"><Link href="/book">Бронирование</Link></li>
+                                <li className="h__bottom__nav__page__li"><Link href="/contacts">Контакты</Link></li>
                             </ul>
                         </nav>
                     </div>
@@ -103,10 +104,11 @@ export default function Header() {
                       animate={isOpen ? { right: 0, opacity: 1 } : { right: "-100%", opacity: 0 }}
                       transition={{ duration: 0.5, ease: "easeInOut" }}
                     >
-                      <ul>
-                        <li><a href="#">Главная</a></li>
-                        <li><a href="#">О нас</a></li>
-                        <li><a href="#">Контакты</a></li>
+                      <ul className="h__mobile__nav__ul">
+                        <li className="h__mobile__nav__li"><Link href="/">Главная</Link></li>
+                        <li className="h__mobile__nav__li"><Link href="/services">Сервисы и услуги</Link></li>
+                        <li className="h__mobile__nav__li"><Link href="/book">Бронирование</Link></li>
+                        <li className="h__mobile__nav__li"><Link href="/contacts">Контакты</Link></li>
                       </ul>
                     </motion.nav>
                 </div>
