@@ -56,9 +56,6 @@ export default function AdminServicesPage() {
           <div className="admin__services__box">
             <AdminSideBar />
             <div className="admin__services__box-content">
-              <div className="admin__services__box-content__header">
-                <h1>Записи</h1>
-              </div>
               <table>
                 <thead>
                   <tr>

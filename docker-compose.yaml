@@ -23,9 +23,13 @@ services:
       - .env
     environment:
       DATABASE_URL: postgresql://admin:123@db:5432/bikefit
+      NEXT_DEV: true
     ports:
       - "3000:3000"
-    entrypoint: ["/bin/sh", "-c", "npx prisma migrate deploy && npm run dev"]
+    volumes:
+      - .:/app 
+      - /app/node_modules  
+    entrypoint: ["/bin/sh", "-c", "npx prisma migrate deploy && npm run dev --turbo"]
 
 volumes:
   postgres_data:

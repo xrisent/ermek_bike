@@ -21,7 +21,7 @@ export async function POST(req) {
     });
 
     return new Response(JSON.stringify({ success: true, admin }), { status: 201 });
-  } catch (error) {
-    return new Response(JSON.stringify({ error: 'Failed to register admin' }), { status: 500 });
+  } catch (err) {
+    return new Response(JSON.stringify({ error: err }), { status: 500 });
   }
 }

@@ -1,5 +1,5 @@
 .admin__services{
-    height: 110vh;
+    height: 120vh;
     background-color: rgba($color: hsl(0, 17%, 21%), $alpha: 1.0);
     position: relative;
 
@@ -9,21 +9,24 @@
 
     &__box{
         display: flex;
+        flex-direction: column;
         height: 100%;
-        justify-content: space-around;
+        justify-content: space-between;
         align-items: center;
+        width: 100%;
 
         &-content{
             display: flex;
             flex-direction: column;
             justify-content: space-between;
             align-items: center;
-            width: 70%;
+            width: 100%;
             height: 90%;
+            margin: 10px 0;
 
             
             table{
-                height: 80%;
+                height: 93%;
                 width: 100%;
                 text-align: center;
                 background-color: black;

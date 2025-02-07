@@ -1,13 +1,37 @@
-import Link from 'next/link';
+"use client"; // Добавляем для App Router
 
-export default function AdminSideBar (){
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 
-    return (
-        <div className="admin__box-sidebar">
-            <Link href="/admin">Создать услугу</Link>
-            <Link href="/admin/bookings">Записи</Link>
-            <Link href="/admin/services">Услуги</Link>
-            <Link href="/admin/logout">Выйти</Link>
-        </div>
-    )
+export default function AdminSideBar() {
+  const pathname = usePathname();
+
+  return (
+    <div className="admin__box-sidebar">
+      <Link 
+        href="/admin" 
+        className={pathname === "/admin" ? "active" : ""}
+      >
+        Создать услугу
+      </Link>
+      <Link 
+        href="/admin/bookings" 
+        className={pathname === "/admin/bookings" ? "active" : ""}
+      >
+        Записи
+      </Link>
+      <Link 
+        href="/admin/services" 
+        className={pathname.slice(0,15) === "/admin/services" ? "active" : ""}
+      >
+        Услуги
+      </Link>
+      <Link 
+        href="/admin/logout" 
+        className={pathname === "/admin/logout" ? "active" : ""}
+      >
+        Выйти
+      </Link>
+    </div>
+  );
 }

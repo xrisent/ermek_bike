@@ -56,7 +56,6 @@ export default function AdminBookingsPage() {
             <AdminSideBar />
             <div className="admin__bookings__box-content">
               <div className="admin__bookings__box-content__header">
-                <h1>Записи</h1>
                 <input
                   type="date"
                   id="datepicker"
@@ -71,7 +70,7 @@ export default function AdminBookingsPage() {
                   <tr>
                     <th onClick={() => handleSort('service.name')}>Услуга</th>
                     <th onClick={() => handleSort('clientName')}>Имя</th>
-                    <th onClick={() => handleSort('phoneNumber')}>Номер телефона</th>
+                    {/* <th onClick={() => handleSort('phoneNumber')}>Номер телефона</th> */}
                     <th onClick={() => handleSort('startTime')}>Начало</th>
                     <th onClick={() => handleSort('endTime')}>Конец</th>
                   </tr>
@@ -80,10 +79,10 @@ export default function AdminBookingsPage() {
                   {currentBookings.map((booking) => (
                     <tr key={booking.id}>
                       <td>{booking.service.name}</td>
-                      <td>{booking.clientName}</td>
-                      <td>{booking.phoneNumber}</td>
-                      <td>{new Date(booking.startTime).toISOString().slice(0, 19).replace('T', ' ')}</td>
-                      <td>{new Date(booking.endTime).toISOString().slice(0, 19).replace('T', ' ')}</td>
+                      <td>{booking.clientName} <br /> {booking.phoneNumber}</td>
+                      {/* <td>{booking.phoneNumber}</td> */}
+                      <td>{new Date(booking.startTime).toISOString().slice(5, 16).replace('T', ' ')}</td>
+                      <td>{new Date(booking.endTime).toISOString().slice(5, 16).replace('T', ' ')}</td>
                     </tr>
                   ))}
                 </tbody>
