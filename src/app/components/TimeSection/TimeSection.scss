@@ -12,21 +12,23 @@
     &__box{
         background-color: rgba($color: rgb(39, 53, 66), $alpha: 1.0);
         width: 600px;
-        height: 200px;
         display: flex;
         flex-direction: column;
         justify-content: space-around;
+        align-items: center;
         padding: 40px;
         
         h4{
             width: 50%;
             font-size: 20px;
             font-weight: 400;
+            text-align: center;
         }
         p{
             width: 55%;
             font-size: 14px;
             font-weight: 300;
+            text-align: center;
         }
     }
 }
@@ -58,7 +60,7 @@
             height: 7%;
             background: none;
             border: 1px solid white;
-            width: 40%;
+            width: 100px;
             height: 30px;
             transition: all 0.18s ease-in-out;
         }
@@ -67,5 +69,16 @@
             background-color: white;
             color: black;
         }
+    }
+}
+
+
+
+@media (max-width: 340px) {}
+
+
+@media (max-width: 340px) {
+    .bookingSection__box h2 {
+        font-size: 25px;
     }
 }
