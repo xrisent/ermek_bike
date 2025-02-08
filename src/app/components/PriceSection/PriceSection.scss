@@ -230,6 +230,37 @@
     }
 }
 
+@media (max-width: 360px) {
+
+    .p__content__variables,
+    .p__content__variables2,
+    .p__content__variables3 {
+        max-width: 200px;
+    }
+
+    .p__content__variables__name, 
+    .p__content__variables2__name, 
+    .p__content__variables3__name {
+        font-size: 16px;
+    }
+
+    .p__content__variables__text, 
+    .p__content__variables2__text, 
+    .p__content__variables3__text {
+        font-size: 12px;
+    }
+
+    .p__c__variables__work__time,
+    .p__c__variables__work__price,
+    .p__c__variables2__work__time,
+    .p__c__variables2__work__price,
+    .p__c__variables3__work__time,
+    .p__c__variables3__work__price {
+        font-size: 12px;
+
+}
+}
+
 
 
 
