@@ -1,94 +1,331 @@
 .price{
-    display:flex;
     background-color: rgba($color: hsl(0, 17%, 21%), $alpha: 1.0);
-    height: 100vh;
+    display: flex;
+    align-items: center; 
+}
+
+.price__container {
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.price__box {
+    max-width: 1080px;
+    margin: 50px auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.price__img {
+    width: 60%;
+    height: 100%;
+}
+
+.price__content {
+    max-width: 350px;
+}
+
+.price__content__name {
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.p__content__variables__name,
+.p__content__variables2__name,
+.p__content__variables3__name {
+    width: 200px;
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+.p__content__variables__text,
+.p__content__variables2__text,
+.p__content__variables3__text {
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+.p__c__variables__work,
+.p__c__variables3__work {
+    max-width: 200px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.p__c__variables2__work {
+    max-width: 150px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.p__c__variables__work__time,
+.p__c__variables__work__price,
+.p__c__variables2__work__time,
+.p__c__variables2__work__price,
+.p__c__variables3__work__time,
+.p__c__variables3__work__price {
+    font-size: 14px;
+    font-weight: 500;
     position: relative;
+}
 
-    .price__box{
-        height: 100%;
-        display: flex;
-        justify-content: flex-end;
-        padding: 0 50px;
+.p__c__variables__work__time::after {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 20px;
+    background-color: white;
+    top: 0;
+    left: 114px;
+}
 
-        &__content{
-            z-index: 50;
-            width: 30%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: flex-start;
+.p__c__variables2__work__time::after {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 20px;
+    background-color: white;
+    top: 0;
+    left: 62px;
+}
 
-            h2{
-                font-size: 27px;
-                height: 10%;
-            }
+.p__c__variables3__work__time::after {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 20px;
+    background-color: white;
+    top: 0;
+    left: 108px;
+}
 
-            ul{
-                height: 55%;
-                display: flex;
-                flex-direction: column;
-                justify-content: space-between;
-                row-gap: 5px;
+.p__content__variables,
+.p__content__variables2,
+.p__content__variables3 {
+    margin-top: 30px;
+    position: relative;
+}
 
-                li{
-                    position: relative;
+.p__content__variables::before,
+.p__content__variables2::before,
+.p__content__variables3::before {
+    content: '';
+    position: absolute;
+    background: url('../../../media/basic-ui-computer-26-svgrepo-com.svg') center/cover no-repeat;
+    width: 30px;
+    height: 30px;
+    top: 0;
+    left: -40px;
+}
 
-                    .variables{
-                        display: flex;
-                        width: fit-content;
-                        justify-content: space-between;
+.price__button {
+    max-width: 1080px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
 
-                        p:first-child{
-                            border-right: 1px solid white;
-                            padding-right: 10px;
-                        }
-                        p:last-child{
-                            padding-left: 10px;
-                        }
-                    }
-                }
+.price__btn {
+    height: 7%;
+    margin: 30px 0 0 0;
+    background: none;
+    border: 1px solid white;
+    width: 130px;
+    height: 40px;
+    transition: all 0.18s ease-in-out;
+    font-size: 18px;
+}
 
-                li::before{
-                    content: "";
-                    width: 30px;
-                    height: 30px;
-                    position: absolute;
-                    top: 10px;
-                    left: -40px;
-                    background: url('../../../media/basic-ui-computer-26-svgrepo-com.svg') center/cover no-repeat;
-                }
+.price__btn:hover{
+    background-color: white;
+    color: black;
+}
 
-                h3{
-                    font-size: 16px;
-                    margin-bottom: 5px;
-                }
 
-                p{
-                    font-size: 12px;
-                }
-            }
 
-            button{
-                height: 7%;
-                margin: 30px 0 0 0;
-                background: none;
-                border: 1px solid white;
-                width: 40%;
-                transition: all 0.18s ease-in-out;
-            }
 
-            button:hover{
-                background-color: white;
-                color: black;
-            }
-        }
-        img{
-            position: absolute;
-            left: 0;
-            top: 0;
-            z-index: 49;
-            width: 60%;
-            height: 100%;
-        }
+@media (max-width: 1300px) {
+    .price__container {
+        max-width: 89%;
+        margin: 0 auto;  
     }
 }
+
+@media (max-width: 1170px) {
+    .price__box {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .price__img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .price__content {
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    .price__content__name {
+        text-align: center;
+        margin-top: 30px;
+    }
+
+    .p__content__box {
+        display: flex;
+        column-gap: 50px;
+    }
+
+    .p__content__variables,
+    .p__content__variables2,
+    .p__content__variables3 {
+        width: 300px;
+    }
+
+    .p__content__variables::before,
+    .p__content__variables2::before,
+    .p__content__variables3::before {
+        content: '';
+        display: none;
+    }
+}
+
+@media (max-width: 890px) {
+    .p__content__box {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .p__content__variables,
+    .p__content__variables2,
+    .p__content__variables3 {
+        max-width: 450px;
+    }
+
+    .p__content__variables__name, 
+    .p__content__variables2__name, 
+    .p__content__variables3__name {
+        text-align: center;
+        margin: 0 auto;
+        margin-bottom: 8px;
+    }
+
+    .p__content__variables__text, 
+    .p__content__variables2__text, 
+    .p__content__variables3__text {
+        text-align: center;
+        margin: 0 auto;
+        margin-bottom: 8px;
+    }
+
+    .p__c__variables__work, 
+    .p__c__variables2__work, 
+    .p__c__variables3__work {
+        margin: 0 auto;
+    }
+}
+
+
+
+
+
+
+// .price{
+//     display:flex;
+//     background-color: rgba($color: hsl(0, 17%, 21%), $alpha: 1.0);
+//     height: 100vh;
+//     position: relative;
+
+//     .price__box{
+//         height: 100%;
+//         display: flex;
+//         justify-content: flex-end;
+//         padding: 0 50px;
+
+//         &__content{
+//             z-index: 50;
+//             width: 30%;
+//             display: flex;
+//             flex-direction: column;
+//             justify-content: center;
+//             align-items: flex-start;
+
+//             h2{
+//                 font-size: 27px;
+//                 height: 10%;
+//             }
+
+//             ul{
+//                 height: 55%;
+//                 display: flex;
+//                 flex-direction: column;
+//                 justify-content: space-between;
+//                 row-gap: 5px;
+
+//                 li{
+//                     position: relative;
+
+//                     .variables{
+//                         display: flex;
+//                         width: fit-content;
+//                         justify-content: space-between;
+
+//                         p:first-child{
+//                             border-right: 1px solid white;
+//                             padding-right: 10px;
+//                         }
+//                         p:last-child{
+//                             padding-left: 10px;
+//                         }
+//                     }
+//                 }
+
+//                 li::before{
+//                     content: "";
+//                     width: 30px;
+//                     height: 30px;
+//                     position: absolute;
+//                     top: 10px;
+//                     left: -40px;
+//                     background: url('../../../media/basic-ui-computer-26-svgrepo-com.svg') center/cover no-repeat;
+//                 }
+
+//                 h3{
+//                     font-size: 16px;
+//                     margin-bottom: 5px;
+//                 }
+
+//                 p{
+//                     font-size: 12px;
+//                 }
+//             }
+
+//             button{
+//                 height: 7%;
+//                 margin: 30px 0 0 0;
+//                 background: none;
+//                 border: 1px solid white;
+//                 width: 40%;
+//                 transition: all 0.18s ease-in-out;
+//             }
+
+//             button:hover{
+//                 background-color: white;
+//                 color: black;
+//             }
+//         }
+//         img{
+//             position: absolute;
+//             left: 0;
+//             top: 0;
+//             z-index: 49;
+//             width: 60%;
+//             height: 100%;
+//         }
+//     }
+// }
