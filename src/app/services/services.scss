@@ -29,7 +29,7 @@
             width: 60%;
 
             li{
-                height: 150px;
+                min-height: 150px;
                 // border: 1px solid rebeccapurple;
                 width: 100%;
                 display: flex;
@@ -46,6 +46,10 @@
                 p{
                     font-size: 15px;
                     font-weight: 200;
+                }
+
+                p:nth-child(3){
+                    margin-top: 20px;
                 }
             }
         }
