@@ -15,27 +15,19 @@ export default function ContactsSection() {
 
                         <div className="c__box__left__list">
                             <div className="c__box__left__list1">
-                                <p className='c__box__left__list1__name'>Фрунзенская набережная 54, Москва.</p>
-                                <Link href={'https://youtube.com'}><p className='c__box__left__list1__text'>Яндекс.Навигатор по запросу Bikefit.ru </p></Link>
-                            </div>
-                            <div className="c__box__left__list2">
-                                <p className='c__box__left__list2__name'>Фрунзенская набережная 54, Москва.</p>
-                                <Link href={'https://youtube.com'}><p className='c__box__left__list2__text'>Яндекс.Навигатор по запросу Bikefit.ru </p></Link>
-                            </div>
-                            <div className="c__box__left__list3">
-                                <p className='c__box__left__list3__name'>Фрунзенская набережная 54, Москва.</p>
-                                <Link href={'https://youtube.com'}><p className='c__box__left__list3__text'>Яндекс.Навигатор по запросу Bikefit.ru </p></Link>
+                                <p className='c__box__left__list1__name'>Первомайский район, г. Бишкек, Улица Фатьянова, 10</p>
+                                <Link target="_blank" href={'https://go.2gis.com/i5b46'} ><p className='c__box__left__list1__text'>Ссылка на адрес </p></Link>
                             </div>
 
                             <div className="c__box__left__list__en">
-                                <p className='c__box__left__list__email'>ermekchmo@mail.ru</p>
-                                <p className='c__box__left__list__number'>+996706030725</p>
+                                <p className='c__box__left__list__email'>ermek.baigazzakov@gmail.com</p>
+                                <p className='c__box__left__list__number'>+996700735803</p>
                             </div>
 
                             <div className="c__box__left__list__imgs">
-                                <Link href={''}><img className='c__box__left__list__img' src={telegramIcon.src} alt="telegram link" /></Link>
-                                <Link href={''}><img className='c__box__left__list__img' src={whatsappIcon.src} alt="whatsapp link" /></Link>
-                                <Link href={''}><img className='c__box__left__list__img' src={instagramIcon.src} alt="instagram link" /></Link>
+                                <Link target="_blank" href={'https://t.me/lytrlmb'}><img className='c__box__left__list__img' src={telegramIcon.src} alt="telegram link" /></Link>
+                                <Link target="_blank" href={'https://wa.me/qr/ZP3OTCHFQE7NI1'}><img className='c__box__left__list__img' src={whatsappIcon.src} alt="whatsapp link" /></Link>
+                                {/* <Link href={''}><img className='c__box__left__list__img' src={instagramIcon.src} alt="instagram link" /></Link> */}
                             </div>
 
                         </div>
@@ -68,7 +60,7 @@ export default function ContactsSection() {
                             </li>
                         </ul>
                         <div className="contacts__p">
-                            <p>ermekchmo@mail.ru</p>
+                            <p>ermek.baigazzakov@gmail.com</p>
                             <p>+99999999</p>
                         </div>
                         <div className="contacts__imgs">

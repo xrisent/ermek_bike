@@ -54,16 +54,19 @@
             font-weight: 400;
         }
 
-        button{
+        a{
             height: 7%;
             background: none;
             border: 1px solid white;
             width: 100px;
             height: 30px;
             transition: all 0.18s ease-in-out;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
-        button:hover{
+        a:hover{
             background-color: white;
             color: black;
         }

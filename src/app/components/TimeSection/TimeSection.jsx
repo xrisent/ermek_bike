@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import './TimeSection.scss';
 
 export default function TimeSection() {
@@ -8,7 +9,7 @@ export default function TimeSection() {
                     <div className="timeSection__box">
                         <h4>Часы работы студии:</h4>
                         <p>Индивидуальная запись по телефону, онлайн или WhatsApp</p>
-                        <p>ПН-ВС 9:00 - 20:00</p>
+                        <p>ВТ-СБ 11:00 - 19:00</p>
                     </div>
                 </div>
             </section>
@@ -16,7 +17,7 @@ export default function TimeSection() {
                 <div className="container">
                     <div className="bookingSection__box">
                         <h2>Запись онлайн</h2>
-                        <button>Записаться</button>
+                        <Link href='/book'>Записаться</Link>
                     </div>
                 </div>
             </section>

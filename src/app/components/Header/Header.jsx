@@ -50,11 +50,11 @@ export default function Header() {
 
                     <div className="header__top">
                         <ul className="h__top__list">
-                            <li className="h__top__list__li">ermekchmo@gmail.com</li>
-                            <li className="h__top__list__li">+996706030725</li>
-                            <li className="h__top__list__li">+996555030725</li>
+                            <li className="h__top__list__li">ermek.baigazzakov@gmail.com</li>
+                            <li className="h__top__list__li">+996700735803</li>
+                            {/* <li className="h__top__list__li">+996555030725</li> */}
                         </ul>
-                        <p className="h__top__whatsapp">Whatsapp</p>
+                        <Link target="_blank" href='https://wa.me/qr/ZP3OTCHFQE7NI1' className="h__top__whatsapp">Whatsapp</Link>
                     </div>
 
                     <div className="header__box__line"></div>
@@ -123,8 +123,8 @@ export default function Header() {
 
 {/* <div className="header__box">
                     <ul>
-                        <li>ermekchmo@gmail.com</li>
-                        <li>+996706030725</li>
+                        <li>ermek.baigazzakov@gmail.com</li>
+                        <li>+996700735803</li>
                         <li>+996555030725</li>
                     </ul>
                     <div className="links">

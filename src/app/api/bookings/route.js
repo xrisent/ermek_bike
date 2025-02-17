@@ -1,5 +1,6 @@
 import { PrismaClient } from '@prisma/client';
 import { toZonedTime } from 'date-fns-tz';
+import { startOfDay, endOfDay } from 'date-fns';
 
 const prisma = new PrismaClient();
 
@@ -38,12 +39,26 @@ export async function POST(req) {
       where: {
         serviceId: parsedServiceId,
         startTime: { lt: endTime }, 
-        endTime: { gt: parsedStartTime }, 
+        endTime: { gt: parsedStartTime },
       },
     });
 
     if (existingBooking) {
       return new Response(JSON.stringify({ error: 'Time slot is already booked' }), { status: 405 });
+    }
+
+    const dayStart = startOfDay(parsedStartTime);
+    const dayEnd = endOfDay(parsedStartTime);
+
+    const existingPhoneBooking = await prisma.booking.findFirst({
+      where: {
+        phoneNumber,
+        startTime: { gte: dayStart, lte: dayEnd },
+      },
+    });
+
+    if (existingPhoneBooking) {
+      return new Response(JSON.stringify({ error: 'A booking with this phone number already exists for this day' }), { status: 405 });
     }
 
     const newBooking = await prisma.booking.create({
@@ -61,6 +76,7 @@ export async function POST(req) {
     return new Response(JSON.stringify({ error: error.message}), { status: 500 });
   }
 }
+
 
 
 export async function GET() {

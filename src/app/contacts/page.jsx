@@ -16,12 +16,12 @@ export default function ContactPage() {
               <div className="contacts__box-bottom">
                 <div className="contacts__box-bottom__left">
                   <p>Адрес: г. Бишкек, улица Фатьянова, 10</p>
-                  <p>Телефон: +996 555 555 555</p>
-                  <p>Почта: ermekchmo@mail.ru</p>
+                  <p>Телефон: +996 700 735 803</p>
+                  <p>Почта: ermek.baigazzakov@gmail.com</p>
                   <div className="contacts__imgs">
-                    <Link href={''}><img src={telegramIcon.src} alt="telegram link" /></Link>
-                    <Link href={''}><img src={whatsappIcon.src} alt="whatsapp link" /></Link>
-                    <Link href={''}><img src={instagramIcon.src} alt="instagram link" /></Link>
+                    <Link target="_blank" href={'https://t.me/lytrlmb'}><img src={telegramIcon.src} alt="telegram link" /></Link>
+                    <Link target="_blank" href={'https://wa.me/qr/ZP3OTCHFQE7NI1'}><img src={whatsappIcon.src} alt="whatsapp link" /></Link>
+                    {/* <Link href={''}><img src={instagramIcon.src} alt="instagram link" /></Link> */}
                   </div>
                 </div>
                 <div className="contacts__box-bottom__right">

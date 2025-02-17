@@ -22,7 +22,7 @@ main{
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 30vh;
+    min-height: 50vh;
 }
 
 @media (max-width: 1300px) {
@@ -32,5 +32,14 @@ main{
 
 }
 
+@media (max-width: 900px){
+    .notFound{
+        min-height: 62vh;
+    }
+}
 
-
+@media (min-width: 910px){
+    .notFound{
+        min-height: 54vh;
+    }
+}

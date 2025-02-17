@@ -10,14 +10,14 @@ export default function Footer() {
             <div className="container">
                 <div className="footer__box">
                     <div className="contacts__imgs">
-                        <Link href={''}><img src={telegramIcon.src} alt="telegram link" /></Link>
-                        <Link href={''}><img src={whatsappIcon.src} alt="whatsapp link" /></Link>
-                        <Link href={''}><img src={instagramIcon.src} alt="instagram link" /></Link>
+                        <Link target="_blank" href={'https://t.me/lytrlmb'}><img src={telegramIcon.src} alt="telegram link" /></Link>
+                        <Link target="_blank" href={'https://wa.me/qr/ZP3OTCHFQE7NI1'}><img src={whatsappIcon.src} alt="whatsapp link" /></Link>
+                        {/* <Link href={''}><img src={instagramIcon.src} alt="instagram link" /></Link> */}
                     </div>
-                    <p>©2019 by bikefit.ru</p>
-                    <p>ИП Бородавкин Александр Юрьевич, ИНН</p>
+                    <p>©2025 by bikefit.kg</p>
+                    {/* <p>ИП Бородавкин Александр Юрьевич, ИНН</p>
                     <p>772793438118, ОГРНИП</p>
-                    <p>321774600201982</p>
+                    <p>321774600201982</p> */}
                 </div>
             </div>
         </footer>

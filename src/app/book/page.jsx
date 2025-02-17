@@ -1,6 +1,8 @@
 'use client';
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import './book.scss';
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
 
 export default function BookPage() {
   const [services, setServices] = useState([]);
@@ -11,6 +13,18 @@ export default function BookPage() {
   const [successMessage, setSuccessMessage] = useState('');
   const [bookings, setBookings] = useState([]);
   const [availableTimes, setAvailableTimes] = useState([]);
+
+  // Фильтрация дней: разрешены только вт, ср, чт, пт, сб
+  const filterDays = (date) => {
+    const day = date.getDay();
+    return day !== 0 && day !== 1; // Исключаем вс (0) и пн (1)
+  };
+
+  function isWeekend(date) {
+    const day = date.getDay();
+    // Проверка, если день - это воскресенье (0) или понедельник (1)
+    return day === 0 || day === 1;
+  }
 
   useEffect(() => {
     fetch('/api/services')
@@ -29,9 +43,9 @@ export default function BookPage() {
 
   const generateAvailableTimes = (date, serviceTime) => {
     const times = [
-      "10:00", "10:30", "11:00", "11:30", "12:00", "12:30", "13:00", "13:30",
+      "11:00", "11:30", "12:00", "12:30", "13:00", "13:30",
       "14:00", "14:30", "15:00", "15:30", "16:00", "16:30", "17:00", "17:30",
-      "18:00", "18:30", "19:00", "19:30"
+      "18:00", "18:30", "19:00"
     ];
   
     const bookedTimes = bookings
@@ -88,6 +102,8 @@ export default function BookPage() {
 
   const handleBooking = async () => {
     try {
+
+      console.log({ clientName, phoneNumber, serviceId, startTime })
 
       const response = await fetch('/api/bookings', {
         method: 'POST',
@@ -156,13 +172,15 @@ export default function BookPage() {
                   value={phoneNumber}
                   onChange={(e) => setPhoneNumber(e.target.value)}
                 />
-                <input
-                  type="date"
-                  id="datepicker"
-                  value={startTime.split("T")[0]}
-                  onChange={(e) => setStartTime(e.target.value + "T10:00")}
-                  min={getCurrentDate()}
-                  onClick={(e) => e.target.showPicker()}
+                <DatePicker
+                  selected={startTime ? new Date(startTime) : null}
+                  onChange={(date) => setStartTime(date.toISOString().split("T")[0] + "T10:00")}
+                  minDate={new Date()}
+                  filterDate={filterDays}
+                  dateFormat="yyyy-MM-dd"
+                  placeholderText="Выберите дату"
+                  popperPlacement="bottom-start"
+                  portalId="root"
                 />
                 
                 <div className="select-container">
