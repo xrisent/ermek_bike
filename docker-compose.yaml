@@ -6,7 +6,7 @@ services:
     restart: always
     environment:
       POSTGRES_USER: admin
-      POSTGRES_PASSWORD: 123
+      POSTGRES_PASSWORD: eckmeck
       POSTGRES_DB: bikefit
     ports:
       - "5432:5432"
@@ -22,10 +22,10 @@ services:
     env_file:
       - .env
     environment:
-      DATABASE_URL: postgresql://admin:123@db:5432/bikefit
+      DATABASE_URL: postgresql://admin:eckmeck@db:5432/bikefit
     ports:
       - "3000:3000"
-    entrypoint: ["/bin/sh", "-c", "npx prisma migrate deploy && npm run dev"]
+    entrypoint: ["/bin/sh", "-c", "npx prisma migrate deploy && npm run start"]
 
 volumes:
   postgres_data:
