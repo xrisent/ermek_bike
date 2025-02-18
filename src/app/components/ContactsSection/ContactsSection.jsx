@@ -3,6 +3,7 @@ import Link from 'next/link';
 import telegramIcon from '../../../media/icons8-telegram.svg'
 import whatsappIcon from '../../../media/icons8-whatsapp.svg'
 import instagramIcon from '../../../media/icons8-instagram.svg'
+import locationImg from '../../../media/PXL_20250218_054139935~2.jpg'
 
 export default function ContactsSection() {
     return (
@@ -34,7 +35,7 @@ export default function ContactsSection() {
 
                     </div>
 
-                    <img className='contactsSection__box__right' src="https://static.wixstatic.com/media/fb88d0_56d9b78b678345dda61b355f724610e8~mv2.jpg/v1/fill/w_816,h_810,fp_0.50_0.50,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/fb88d0_56d9b78b678345dda61b355f724610e8~mv2.jpg" alt="" />
+                    <img className='contactsSection__box__right' src={locationImg.src} alt="" />
                 </div>
             </div>
         </section>
