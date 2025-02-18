@@ -21,7 +21,7 @@ export default function ContactPage() {
                   <div className="contacts__imgs">
                     <Link target="_blank" href={'https://t.me/lytrlmb'}><img src={telegramIcon.src} alt="telegram link" /></Link>
                     <Link target="_blank" href={'https://wa.me/qr/ZP3OTCHFQE7NI1'}><img src={whatsappIcon.src} alt="whatsapp link" /></Link>
-                    {/* <Link href={''}><img src={instagramIcon.src} alt="instagram link" /></Link> */}
+                    <Link target="_blank" href={'https://www.instagram.com/bikefit.kg?igsh=enh3ejI3djNrMzN3'}><img src={instagramIcon.src} alt="instagram link" /></Link>
                   </div>
                 </div>
                 <div className="contacts__box-bottom__right">

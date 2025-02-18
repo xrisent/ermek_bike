@@ -28,7 +28,7 @@ export default function ContactsSection() {
                             <div className="c__box__left__list__imgs">
                                 <Link target="_blank" href={'https://t.me/lytrlmb'}><img className='c__box__left__list__img' src={telegramIcon.src} alt="telegram link" /></Link>
                                 <Link target="_blank" href={'https://wa.me/qr/ZP3OTCHFQE7NI1'}><img className='c__box__left__list__img' src={whatsappIcon.src} alt="whatsapp link" /></Link>
-                                {/* <Link href={''}><img className='c__box__left__list__img' src={instagramIcon.src} alt="instagram link" /></Link> */}
+                                <Link target="_blank" href={'https://www.instagram.com/bikefit.kg?igsh=enh3ejI3djNrMzN3'}><img className='c__box__left__list__img' src={instagramIcon.src} alt="instagram link" /></Link>
                             </div>
 
                         </div>
