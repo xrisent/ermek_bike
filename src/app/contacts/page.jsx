@@ -1,10 +1,15 @@
 'use client'
 
+import dynamic from 'next/dynamic';
 import Link from 'next/link';
 import './contacts.scss';
 import telegramIcon from '../../media/icons8-telegram.svg'
 import whatsappIcon from '../../media/icons8-whatsapp.svg'
 import instagramIcon from '../../media/icons8-instagram.svg'
+
+const MapComponent = dynamic(() => import('./MapComponent'), { 
+  ssr: false 
+});
 
 export default function ContactPage() {
     return (
@@ -25,12 +30,7 @@ export default function ContactPage() {
                   </div>
                 </div>
                 <div className="contacts__box-bottom__right">
-                  <iframe
-                    src="http://widgets.2gis.com/widget?type=firmsonmap&options=%7B%22pos%22%3A%7B%22lat%22%3A42.85952164290271%2C%22lon%22%3A74.60700631141664%2C%22zoom%22%3A16%7D%2C%22opt%22%3A%7B%22city%22%3A%22bishkek%22%7D%2C%22org%22%3A%2270000001087443887%22%7D"
-                    width="90%"
-                    height="90%"
-                    style={{ border: "1px solid #a3a3a3", boxSizing: "border-box" }}
-                  ></iframe>
+                  <MapComponent />
                 </div>
               </div>
             </div>

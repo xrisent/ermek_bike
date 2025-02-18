@@ -33,7 +33,7 @@ export default function AdminLoginPage() {
       <section className='admin__login'>
         <div className="container">
           <div className="admin__login__box">
-            <AdminSideBar/>
+            {/* <AdminSideBar/> */}
             <div className="admin__login__box-content">
               <h2>Вход</h2>
               {error && <p>{error}</p>}
