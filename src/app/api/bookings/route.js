@@ -1,8 +1,26 @@
 import { PrismaClient } from '@prisma/client';
 import { toZonedTime } from 'date-fns-tz';
 import { startOfDay, endOfDay } from 'date-fns';
+import fetch from 'node-fetch'; 
 
 const prisma = new PrismaClient();
+const TELEGRAM_BOT_TOKEN = process.env.TG_BOT_ID;
+const ADMIN_CHAT_ID = process.env.TG_ID;
+
+async function sendTelegramMessage(message) {
+  const url = `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`;
+  const response = await fetch(url, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      chat_id: ADMIN_CHAT_ID,
+      text: message,
+    }),
+  });
+
+  const data = await response.json(); 
+  return data;
+}
 
 export async function POST(req) {
   try {
@@ -70,6 +88,9 @@ export async function POST(req) {
         endTime,
       },
     });
+
+    const message = `Новая запись:\nИмя: ${clientName}\nНомер: ${phoneNumber}\nНазвание услуги: ${service.name}\nВремя начала записи: ${parsedStartTime}`;
+    await sendTelegramMessage(message);
 
     return new Response(JSON.stringify(newBooking), { status: 201 });
   } catch (error) {
