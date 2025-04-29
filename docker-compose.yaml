@@ -45,7 +45,7 @@ services:
   certbot:
     image: certbot/certbot
     container_name: certbot
-    command: certonly --webroot --webroot-path=/var/www/certbot --email your-email@example.com --agree-tos --no-eff-email --staging -d bikefit.kg -d www.bikefit.kg
+    command: certonly --webroot --webroot-path=/var/www/certbot --email ormonov31261@gmail.com --agree-tos --no-eff-email -d bikefit.kg -d www.bikefit.kg
     volumes:
       - ./ssl/certs:/etc/letsencrypt
       - ./ssl/webroot:/var/www/certbot
