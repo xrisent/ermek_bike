@@ -14,15 +14,13 @@ export default function BookPage() {
   const [bookings, setBookings] = useState([]);
   const [availableTimes, setAvailableTimes] = useState([]);
 
-  // Фильтрация дней: разрешены только вт, ср, чт, пт, сб
   const filterDays = (date) => {
     const day = date.getDay();
-    return day !== 0 && day !== 1; // Исключаем вс (0) и пн (1)
+    return day !== 0 && day !== 1;
   };
 
   function isWeekend(date) {
     const day = date.getDay();
-    // Проверка, если день - это воскресенье (0) или понедельник (1)
     return day === 0 || day === 1;
   }
 
@@ -101,29 +99,41 @@ export default function BookPage() {
 
   const handleBooking = async () => {
     try {
-
-      console.log({ clientName, phoneNumber, serviceId, startTime })
-
+      console.log({ clientName, phoneNumber, serviceId, startTime });
+  
       const response = await fetch('/api/bookings', {
         method: 'POST',
         body: JSON.stringify({ clientName, phoneNumber, serviceId, startTime }),
         headers: { 'Content-Type': 'application/json' },
       });
-
+  
+      const data = await response.json();
+  
       if (response.ok) {
         setSuccessMessage('Бронирование успешно создано!');
         setClientName('');
         setStartTime('');
         setPhoneNumber('');
         setServiceId('');
-        setAvailableTimes([])
-        fetch('/api/bookings') 
+        setAvailableTimes([]);
+        fetch('/api/bookings')
           .then((res) => res.json())
           .then(setBookings);
       } else {
-        setSuccessMessage('Ошибка при бронировании. Попробуйте снова.');
+        if (data.error === 'Бронирование недоступно в воскресенье и понедельник') {
+          setSuccessMessage('Выбрана недоступная дата. Пожалуйста, выберите другой день (вторник-суббота).');
+        } else if (data.error === 'Start time cannot be in the past') {
+          setSuccessMessage('Выбрана прошедшая дата. Пожалуйста, выберите будущую дату.');
+        } else if (data.error === 'Time slot is already booked') {
+          setSuccessMessage('Это время уже занято. Пожалуйста, выберите другое время.');
+        } else if (data.error === 'A booking with this phone number already exists for this day') {
+          setSuccessMessage('На этот номер телефона уже есть запись на выбранный день.');
+        } else {
+          setSuccessMessage('Ошибка при бронировании. Попробуйте снова.');
+        }
       }
-    } catch {
+    } catch (error) {
+      console.error('Booking error:', error);
       setSuccessMessage('Произошла ошибка. Попробуйте позже.');
     }
   };

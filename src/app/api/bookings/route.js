@@ -33,9 +33,16 @@ export async function POST(req) {
       return new Response(JSON.stringify({ error: 'Invalid start time' }), { status: 400 });
     }
 
-    const bishkekTime = toZonedTime(new Date(), 'Asia/Bishkek');
+    const bishkekTime = toZonedTime(parsedStartTime, 'Asia/Bishkek');
+    const dayOfWeek = bishkekTime.getDay();
     
-    if (parsedStartTime < bishkekTime) {
+    if (dayOfWeek === 0 || dayOfWeek === 1) {
+      return new Response(JSON.stringify({ error: 'Бронирование недоступно в воскресенье и понедельник' }), { status: 400 });
+    }
+
+    const currentBishkekTime = toZonedTime(new Date(), 'Asia/Bishkek');
+    
+    if (parsedStartTime < currentBishkekTime) {
       return new Response(JSON.stringify({ error: 'Start time cannot be in the past' }), { status: 400 });
     }
 
